@@ -90,3 +90,17 @@ var frog = new animal("amphibian", 2);
 /*
  * 8. var studentScores = [50, 67, 80, 90, 100, 30, 88, 68]; write a program by using studentScores array , array.forEach and conditions.
  */
+
+  	var studentScores = [50, 67, 80, 90, 100, 30, 88, 68];
+ 	var aboveA = 0;
+ 	var belowA = 0;
+ 	var count = 0;
+ 	studentScores.forEach(function(score){
+ 		if(studentScores[count] < 70)
+ 			aboveA++;
+ 		else
+ 			belowA++;
+
+ 		count++;
+ 	});
+ 	console.log(aboveA + " scored above 70, while " + belowA + " scored below 70");

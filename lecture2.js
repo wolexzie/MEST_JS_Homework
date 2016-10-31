@@ -2,18 +2,19 @@
  * 1. explain the special meaning of the following special characters
  \0 the null character
  \n new line // Includes a new line
- \r carriage return // add a
+ \r carriage return // returns the cursor to the beginning of the same line 
  \v vertical tab // Tab downwards
  \t // Adds a new tab
  \backspace
- \f form feed
+ \f form feed // takes the cursor to the next page
  */
 
 /*
  *  2.Please combine those two array together as one array by using concate:
- *  var arr1 = ['Sunday', 'Monday', 'Tuesday', 'Wednesday']
- *  var arr2 = ['Thursday', 'Friday', 'Saturday']
+ *  var arr1 = ['Sunday', 'Monday', 'Tuesday', 'Wednesday'];
+ *  var arr2 = ['Thursday', 'Friday', 'Saturday'];
  */
+		arr1.concat(arr2);
 
 /*
  *  3.Please combine those three array together as one array by only using concate() function once:
@@ -21,6 +22,7 @@
  *  var arr2 = ['Tuesday', 'Wednesday']
  *  var arr3 = ['Thursday', 'Friday', 'Saturday']
  */
+ 		arr1.concat(arr2, arr3);
 
 /*
  * 4. what is the result(output of following code):
@@ -34,11 +36,15 @@
  *    var arr = [1, 3, 'apple', 'orange', 'black', 'test', 2];
  *    console.log(arr.sort());
  *    console.log(arr);
+ 			newarr = [ 'Enoch', 'Todd', 'Yaw', 'ashwin', 'jerry', 'lars', 'mike' ]
+
  */
 
 /*
  * 6. Please remove mike, jerry, adn Enoch from the following array by using slice
  *    var arr = ['ashwin', 'Todd', 'mike', 'jerry', 'Yaw', 'Enoch', 'lars'];
+ ANSWER:
+ console.log(arr.slice(0,2) + "," +  arr.slice(4,5) + "," +  arr.slice(6));
  */
 
 /*
@@ -46,6 +52,9 @@
  *    var arr = ['ashwin', 'Todd', 'mike', 'jerry', 'Yaw', 'Enoch', 'lars'];
  *    console.log(arr.slice(-3, -1));
  *    console.log(arr);
+ ANSWER:
+ -["Yaw", "Enoch"]
+ -["ashwin", "Todd", "mike", "jerry", "Yaw", "Enoch", "lars"]
  */
 
 
@@ -54,6 +63,9 @@
  *    var arr = ['ashwin', 'Todd', 'mike', 'jerry', 'Yaw', 'Enoch', 'lars'];
  *    console.log(arr.slice(2));
  *    console.log(arr);
+ ANSWER:
+ -["mike", "jerry", "Yaw", "Enoch", "lars"]
+ -['ashwin', 'Todd', 'mike', 'jerry', 'Yaw', 'Enoch', 'lars']
  */
 
 /*
@@ -61,6 +73,9 @@
  *    var arr = ['ashwin', 'Todd', 'mike', 'jerry', 'Yaw', 'Enoch', 'lars'];
  *    console.log(arr.slice(-2));
  *    console.log(arr);
+  ANSWER:
+ -['Enoch', 'lars']
+ -['ashwin', 'Todd', 'mike', 'jerry', 'Yaw', 'Enoch', 'lars']
  */
 
 /*
@@ -70,11 +85,19 @@
  *   }
  *
  *   and invoke the function expression to caluate the result of 256 + 532
+
+ ANSWER
+ addTwoNumber(256, 532)
  */
 
 /*
  * 11. create an immediately invoked function expression
  * store the iife within a variable and call it
+
+ ANSWER
+ function mest(){
+	console.log("Hi there");
+ }
  */
 
 /*
@@ -93,6 +116,9 @@
  *
  *    use bind function here to make namer() function to call 'ashwin'
  *    and lars
+
+ ANSWER
+console.log(namer.bind(person1)());
  */
 
 /*
@@ -107,6 +133,10 @@
  *    }
  *  a. what is the result when we invoke count()?
  *  b. use bind on function expression to make this work.
+
+ ANSWER
+ count.bind(number)();
+
  */
 
 /*
@@ -126,6 +156,9 @@
  *    }
  *
  *  use call methods on function expression to make this work.
+
+ ANSWER
+ hello.bind(person1)("hi");
  */
 
 /*
@@ -133,4 +166,11 @@
  *     var str = 'Training, mentoring, and investing in world-class tech entrepreneurs in Africa.'
  *
  *     please write a function to change the first letter of every word to upper case.
+ 
+  	   ANSWER:
+ 	   	input = "Training, mentoring, and investing in world-class tech entrepreneurs in Africa.";
+		input = input.split(" ");
+		for(var i = 0; i < input.length; i++){
+			console.log(input[i].slice(0,1).toUpperCase() + input[i].slice(1));
+		}
  */

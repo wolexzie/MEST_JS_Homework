@@ -1,10 +1,10 @@
 /*
  * 1. explain the special meaning of the following special characters
  \0 the null character
- \n new line
- \r carriage return
- \v vertical tab
- \t
+ \n new line // Includes a new line
+ \r carriage return // add a
+ \v vertical tab // Tab downwards
+ \t // Adds a new tab
  \backspace
  \f form feed
  */
